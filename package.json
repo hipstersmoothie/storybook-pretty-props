@@ -1,6 +1,6 @@
 {
   "name": "storybook-pretty-props",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Render prop types in a pretty way! Useful for storybook addons that display prop types.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
