@@ -59,7 +59,6 @@
       [
         "gh-pages",
         {
-          "buildCommand": "yarn storybook build",
           "dir": "./out"
         }
       ]
