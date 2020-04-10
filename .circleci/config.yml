@@ -1,0 +1,84 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/storybook-pretty-props
+  docker:
+    - image: circleci/node:latest-browsers
+
+jobs:
+  install:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            # Find a cache corresponding to this specific package.json checksum
+            # when this file is changed, this key will fail
+            - storybook-pretty-props-{{ .Branch }}-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+            - storybook-pretty-props-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - storybook-pretty-props-{{ .Branch }}
+            # Find the most recent cache used from any branch
+            - storybook-pretty-props-master
+            - storybook-pretty-props-
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          key: storybook-pretty-props-{{ .Branch }}-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+          paths:
+            - node_modules
+            - ~/.cache/yarn
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+  lint:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/storybook-pretty-props
+      - run:
+          name: Lint
+          command: yarn lint
+
+  build:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/storybook-pretty-props
+      - run:
+          name: Build
+          command: yarn build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+  release:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/storybook-pretty-props
+      - run:
+          name: Release
+          command: yarn run release
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - install
+
+      - lint:
+          requires:
+            - install
+
+      - build:
+          requires:
+            - install
+
+      - release:
+          requires:
+            - lint
+            - build
