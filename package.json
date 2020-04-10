@@ -31,6 +31,7 @@
     "@auto-it/first-time-contributor": "9.26.8",
     "@auto-it/gh-pages": "^9.26.8",
     "@design-systems/cli": "1.4.14",
+    "all-contributors-cli": "^6.14.1",
     "auto": "9.26.8",
     "auto-config-hipstersmoothie": "^3.0.3",
     "husky": "3.0.1",
