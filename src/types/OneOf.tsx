@@ -23,9 +23,10 @@ const OneOf = ({ propType }: PropRenderer<EnumType>) => {
 
   const isMinimizable = code.length > MAX_LENGTH;
   const typeDef = minimized ? formatted.substr(0, MAX_LENGTH) : formatted;
+  const singleLine = isMinimizable && minimized;
 
   return (
-    <span style={{ whiteSpace: "pre" }}>
+    <span style={{ whiteSpace: singleLine ? "normal" : "pre" }}>
       {typeDef}
       {isMinimizable && (
         <HighlightButton onClick={toggle}>...</HighlightButton>
