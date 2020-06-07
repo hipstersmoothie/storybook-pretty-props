@@ -3,24 +3,10 @@ import React from "react";
 import PrettyPropType from "./PrettyPropType";
 import PropertyLabel from "./PropertyLabel";
 
-import { Element, getPropTypes, ShapeType, PropRenderer } from "./types";
+import { getPropTypes, ShapeType, PropRenderer } from "./types";
+import { HighlightButton } from '../utils';
 
 const MARGIN_SIZE = 15;
-
-/** A button to show more or less of a shape type */
-const HighlightButton = (props: Element<"button">) => (
-  <button
-    type="button"
-    {...props}
-    style={{
-      display: "inline-block",
-      background: "none",
-      border: "0 none",
-      color: "gray",
-      cursor: "pointer"
-    }}
-  />
-);
 
 interface ShapeProps extends PropRenderer<ShapeType> {
   /** How far into the shape should we render */
