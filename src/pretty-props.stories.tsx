@@ -24,6 +24,21 @@ export const Enum = () => (
   />
 );
 
+export const EnumMany = () => (
+  <PrettyPropType
+    propType={{
+      name: "enum",
+      value: [
+        ...'abcdefghijklmnopqrstuvwxyz'.toUpperCase(),
+        ...'abcdefghijklmnopqrstuvwxyz'
+      ].map(value => ({
+        value,
+        name: 'literal'
+      })),
+    }}
+  />
+);
+
 export const InstanceOf = () => (
   <PrettyPropType
     propType={{
