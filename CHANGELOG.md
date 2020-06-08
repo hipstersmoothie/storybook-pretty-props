@@ -1,3 +1,19 @@
+# v1.1.0 (Mon Jun 08 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Peter Mikitsh ([@petermikitsh](https://github.com/petermikitsh)), for all your work!
+
+#### 🚀 Enhancement
+
+- feat: minimize long enum types [#1](https://github.com/hipstersmoothie/storybook-pretty-props/pull/1) ([@petermikitsh](https://github.com/petermikitsh))
+
+#### Authors: 1
+
+- Peter Mikitsh ([@petermikitsh](https://github.com/petermikitsh))
+
+---
+
 # v1.0.3 (Fri Apr 10 2020)
 
 :tada: This release contains work from a new contributor! :tada:
