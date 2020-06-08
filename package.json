@@ -20,6 +20,7 @@
     "start": "ds build --watch",
     "lint": "ds lint",
     "storybook": "ds storybook start",
+    "storybook:build": "ds storybook build",
     "release": "auto shipit"
   },
   "files": [
@@ -58,6 +59,7 @@
       [
         "gh-pages",
         {
+          "buildCommand": "npm run storybook:build",
           "dir": "./out"
         }
       ]
