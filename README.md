@@ -42,6 +42,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://hipstersmoothie.com"><img src="https://avatars3.githubusercontent.com/u/1192452?v=4" width="100px;" alt=""/><br /><sub><b>Andrew Lisowski</b></sub></a><br /><a href="https://github.com/hipstersmoothie/storybook-pretty-props/commits?author=hipstersmoothie" title="Code">💻</a> <a href="https://github.com/hipstersmoothie/storybook-pretty-props/commits?author=hipstersmoothie" title="Documentation">📖</a> <a href="#example-hipstersmoothie" title="Examples">💡</a> <a href="https://github.com/hipstersmoothie/storybook-pretty-props/commits?author=hipstersmoothie" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/petermikitsh"><img src="https://avatars3.githubusercontent.com/u/1571918?v=4" width="100px;" alt=""/><br /><sub><b>Peter Mikitsh</b></sub></a><br /><a href="#example-petermikitsh" title="Examples">💡</a> <a href="https://github.com/hipstersmoothie/storybook-pretty-props/commits?author=petermikitsh" title="Code">💻</a></td>
   </tr>
 </table>
 
