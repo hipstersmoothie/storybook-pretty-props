@@ -1,3 +1,19 @@
+# v1.1.1 (Mon Jun 08 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie)), for all your work!
+
+#### ⚠️  Pushed to `master`
+
+- add storybook build ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v1.1.0 (Mon Jun 08 2020)
 
 :tada: This release contains work from a new contributor! :tada:
