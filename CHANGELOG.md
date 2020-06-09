@@ -1,3 +1,15 @@
+# v1.1.2 (Tue Jun 09 2020)
+
+#### 🐛 Bug Fix
+
+- fix: handle prettier formatting exception [#2](https://github.com/hipstersmoothie/storybook-pretty-props/pull/2) ([@petermikitsh](https://github.com/petermikitsh))
+
+#### Authors: 1
+
+- Peter Mikitsh ([@petermikitsh](https://github.com/petermikitsh))
+
+---
+
 # v1.1.1 (Mon Jun 08 2020)
 
 :tada: This release contains work from a new contributor! :tada:
