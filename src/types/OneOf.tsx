@@ -9,24 +9,30 @@ const MAX_LENGTH = 36;
 /** Render a oneOf type */
 const OneOf = ({ propType }: PropRenderer<EnumType>) => {
   const [minimized, setMinimized] = React.useState(true);
+  const didFormat = React.useRef(true);
   /** Toggle viewing the entire shape */
   const toggle = () => setMinimized(!minimized);
   const propTypes = getPropTypes(propType);
-  const code = `oneOf = ${
+  let code = `oneOf = ${
     Array.isArray(propTypes) ? joinValues(propTypes) : propTypes
   };`;
 
-  const formatted = prettier.format(code, {
-    parser: "typescript",
-    plugins: [parserTypescript],
-  });
+  try {
+    code = prettier.format(code, {
+      parser: "typescript",
+      plugins: [parserTypescript],
+    });
+    didFormat.current = true;
+  } catch (e) {
+    didFormat.current = false;
+  }
 
   const isMinimizable = code.length > MAX_LENGTH;
-  const typeDef = minimized ? formatted.substr(0, MAX_LENGTH) : formatted;
-  const singleLine = isMinimizable && minimized;
+  const typeDef = minimized ? code.substr(0, MAX_LENGTH) : code;
+  const isMultiline = !minimized && didFormat.current;
 
   return (
-    <span style={{ whiteSpace: singleLine ? "normal" : "pre" }}>
+    <span style={{ whiteSpace: isMultiline ? "pre" : "normal" }}>
       {typeDef}
       {isMinimizable && (
         <HighlightButton onClick={toggle}>...</HighlightButton>
