@@ -39,6 +39,18 @@ export const EnumMany = () => (
   />
 );
 
+export const EnumOverflow = () => (
+  <PrettyPropType
+    propType={{
+      name: "enum",
+      value: [...Array(1000).keys()].map((value) => ({
+        value: `${value}`,
+        name: "literal",
+      })),
+    }}
+  />
+);
+
 export const InstanceOf = () => (
   <PrettyPropType
     propType={{
