@@ -1,3 +1,19 @@
+# v1.2.0 (Wed Jun 17 2020)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie)), for all your work!
+
+#### 🚀 Enhancement
+
+- export propTypes types [#3](https://github.com/hipstersmoothie/storybook-pretty-props/pull/3) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v1.1.3 (Fri Jun 12 2020)
 
 :tada: This release contains work from a new contributor! :tada:
