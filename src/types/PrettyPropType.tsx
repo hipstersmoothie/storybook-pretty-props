@@ -20,10 +20,10 @@ const propTypeComponentMap = new Map<string, React.ComponentType<any>>([
   ["shape", Shape],
   ["union", OneOfType],
   ["arrayOf", ArrayOf],
-  ["objectOf", ObjectOf]
+  ["objectOf", ObjectOf],
 ]);
 
-interface PrettyPropTypeProps {
+export interface PrettyPropTypeProps {
   /** The prop to render */
   propType?: PropTypeValue;
   /** how deep to go when rendering object */
@@ -48,7 +48,7 @@ const PrettyPropType = ({ propType, depth }: PrettyPropTypeProps) => {
 };
 
 PrettyPropType.defaultProps = {
-  depth: 1
+  depth: 1,
 };
 
 export default PrettyPropType;
