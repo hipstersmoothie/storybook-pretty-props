@@ -65,5 +65,9 @@
         }
       ]
     ]
-  }
+  },
+  "keywords": [
+    "storybook-addon",
+    "organize"
+  ]
 }
